@@ -1,0 +1,79 @@
+@mixin htwt($ht, $wt: $ht) {
+  height: $ht;
+  width: $wt;
+}
+@mixin centerImg($image-url) {
+  background-image: url("../../images/" + $image-url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+$text-color: #ffffff;
+$text-color-pink: #bdc09d;
+
+* {
+  margin: 0;
+  padding: 0;
+  //   box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: $text-color;
+}
+div.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10rem;
+}
+nav {
+  display: none;
+}
+
+div.img {
+  border-radius: 50%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#section-1 {
+  div.img {
+    @include htwt(340px);
+    @include centerImg("pexels-photo-8832583.jpeg");
+  }
+}
+#section-4 {
+  > div > div.img-container {
+    border-radius: 10%;
+    transition: 100ms ease-in-out;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+
+    &:hover {
+      border-radius: 0;
+      //   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    }
+
+    img {
+      background: red;
+      @include htwt(22rem);
+    }
+  }
+}
+#section-6 {
+  div.img {
+    @include htwt(198px);
+    @include centerImg("pexels-photo-8789212.jpeg");
+  }
+}
+
+footer {
+  background-color: #333333;
+}
