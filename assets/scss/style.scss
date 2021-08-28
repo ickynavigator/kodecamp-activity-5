@@ -10,7 +10,8 @@
 }
 
 $text-color: #ffffff;
-$text-color-pink: #bdc09d;
+$text-color-pink: #f7d7c8;
+$text-color-grey: #999999;
 
 * {
   margin: 0;
@@ -21,6 +22,7 @@ $text-color-pink: #bdc09d;
 body {
   background: black;
   color: $text-color;
+  font-family: Merriweather, serif !important;
 }
 div.wrapper {
   display: flex;
@@ -43,16 +45,70 @@ section {
   justify-content: center;
 }
 #section-1 {
+  width: 100%;
+  align-items: center;
+  h2,
+  h5 {
+    color: $text-color-pink;
+    margin: 1rem 0;
+  }
+  h2 {
+    font-size: 4.5rem;
+    font-weight: 400;
+  }
+  h5 {
+    font-weight: 400;
+    font-size: 1.25rem;
+    font-family: Ubuntu, sans-serif !important;
+
+    word-wrap: break-word;
+    position: relative;
+  }
   div.img {
     @include htwt(340px);
     @include centerImg("pexels-photo-8832583.jpeg");
   }
+  p {
+    font-weight: 300;
+    text-align: justify;
+
+    color: $text-color-grey;
+    padding: 0 12rem;
+
+    font-family: "Open Sans", sans-serif;
+  }
+}
+#section-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  overflow: hidden;
+
+  .left {
+    h1 {
+      color: $text-color-pink;
+    }
+    h4 {
+      color: $text-color;
+    }
+  }
+  .right {
+    h4 {
+      color: $text-color-pink;
+    }
+  }
 }
 #section-4 {
+  div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+  }
+
   > div > div.img-container {
     border-radius: 10%;
     transition: 100ms ease-in-out;
-    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
 
