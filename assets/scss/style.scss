@@ -17,7 +17,7 @@ $text-color-link: #d7cce5;
 * {
   margin: 0;
   padding: 0;
-  //   box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -25,21 +25,58 @@ body {
   color: $text-color;
   font-family: Merriweather, serif !important;
 }
-div.wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 10rem;
+
+header {
+  margin: 1rem;
+  text-align: center;
+  button {
+    background: transparent;
+    border: none;
+    i {
+      color: $text-color;
+    }
+  }
 }
-nav {
-  display: none;
+#sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
+  ul {
+    list-style: none;
+    text-align: center;
+
+    li {
+      a {
+        text-decoration: none;
+        color: $text-color;
+        &:hover {
+          color: $text-color-grey;
+        }
+      }
+    }
+  }
 }
 
-div.img {
-  border-radius: 50%;
+div {
+  &#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10rem;
+  }
+  &.img {
+    border-radius: 50%;
+  }
 }
-
 section {
   display: flex;
   flex-direction: column;
@@ -48,6 +85,7 @@ section {
 #section-1 {
   width: 100%;
   align-items: center;
+  margin-bottom: 10rem;
   h2,
   h5 {
     color: $text-color-pink;
@@ -80,6 +118,14 @@ section {
     padding: 0 12rem;
 
     font-family: "Open Sans", sans-serif;
+  }
+  span {
+    margin-top: 2rem;
+  }
+  a > i {
+    color: $text-color;
+    margin: 0 2rem;
+    // @include htwt(50px);
   }
 }
 #section-2 {
@@ -127,6 +173,10 @@ section {
       font-weight: 400;
       font-family: "Open Sans", sans-serif !important;
     }
+    i {
+      font-size: 1em;
+      color: $text-color-pink;
+    }
     a {
       text-decoration: none;
       border-style: none;
@@ -146,11 +196,13 @@ section {
   // display: flex;
   // justify-content: center;
   // align-items: center;
+
   margin: 10rem;
   h2,
   hr,
   p,
-  h5 {
+  h5,
+  i {
     text-align: center;
   }
   h2 {
@@ -160,6 +212,8 @@ section {
   }
   hr {
     margin: 4rem 0;
+    border-color: $text-color-pink;
+    border-width: 1px;
   }
   p {
     font-family: Merriweather, serif;
@@ -202,11 +256,110 @@ section {
       @include htwt(22rem);
     }
   }
+
+  span {
+    margin: 0 auto;
+    margin-top: 5rem;
+    > button {
+      border: 2px solid $text-color-pink;
+      background: none;
+      padding: 0.5rem;
+      border-radius: 0;
+      font-size: 1.25rem;
+      font-weight: 700;
+      font-family: Ubuntu, sans-serif !important;
+      color: $text-color-pink;
+      text-align: center;
+      padding: 20px 63px 20px 61px;
+
+      &:hover {
+        border-color: $text-color;
+        background: $text-color;
+        color: #000;
+      }
+    }
+  }
+}
+#section-5 {
+  margin: 10rem auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  // grid-template-rows: 1fr;
+  .left,
+  .right {
+    margin: 0 1rem;
+  }
+  .left {
+    h5 {
+      font-family: Ubuntu, sans-serif !important;
+      font-size: 1.25rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: $text-color-pink;
+      font-weight: 700;
+    }
+  }
+  // .right {}
 }
 #section-6 {
+  text-align: center;
+  align-items: center;
+  > * {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: $text-color-pink;
+  }
   div.img {
     @include htwt(198px);
     @include centerImg("pexels-photo-8789212.jpeg");
+  }
+  i {
+    font-size: 1em;
+    color: $text-color-pink;
+  }
+  a {
+    text-decoration: none;
+    border-style: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif !important;
+    padding: 0;
+    color: $text-color;
+
+    &:hover {
+      color: $text-color-pink;
+    }
+  }
+  h6 {
+    color: $text-color-pink;
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: Ubuntu, sans-serif !important;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: "Open Sans", sans-serif;
+  }
+  hr {
+    border-width: 10px;
+    stroke: none;
+    width: 198px;
+    color: $text-color-pink;
+    border-style: solid;
   }
 }
 

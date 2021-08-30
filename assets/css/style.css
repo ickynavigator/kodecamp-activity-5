@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -9,7 +11,51 @@ body {
   font-family: Merriweather, serif !important;
 }
 
-div.wrapper {
+header {
+  margin: 1rem;
+  text-align: center;
+}
+
+header button {
+  background: transparent;
+  border: none;
+}
+
+header button i {
+  color: #ffffff;
+}
+
+#sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+}
+
+#sidenav ul {
+  list-style: none;
+  text-align: center;
+}
+
+#sidenav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#sidenav ul li a:hover {
+  color: #999999;
+}
+
+div#wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,10 +70,6 @@ div.wrapper {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 10rem;
-}
-
-nav {
-  display: none;
 }
 
 div.img {
@@ -52,6 +94,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 10rem;
 }
 
 #section-1 h2,
@@ -91,6 +134,15 @@ section {
   color: #999999;
   padding: 0 12rem;
   font-family: "Open Sans", sans-serif;
+}
+
+#section-1 span {
+  margin-top: 2rem;
+}
+
+#section-1 a > i {
+  color: #ffffff;
+  margin: 0 2rem;
 }
 
 #section-2 {
@@ -143,6 +195,11 @@ section {
   font-family: "Open Sans", sans-serif !important;
 }
 
+#section-2 .right i {
+  font-size: 1em;
+  color: #f7d7c8;
+}
+
 #section-2 .right a {
   text-decoration: none;
   border-style: none;
@@ -164,7 +221,8 @@ section {
 #section-3 h2,
 #section-3 hr,
 #section-3 p,
-#section-3 h5 {
+#section-3 h5,
+#section-3 i {
   text-align: center;
 }
 
@@ -176,6 +234,8 @@ section {
 
 #section-3 hr {
   margin: 4rem 0;
+  border-color: #f7d7c8;
+  border-width: 1px;
 }
 
 #section-3 p {
@@ -223,6 +283,77 @@ section {
   width: 22rem;
 }
 
+#section-4 span {
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+#section-4 span > button {
+  border: 2px solid #f7d7c8;
+  background: none;
+  padding: 0.5rem;
+  border-radius: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: Ubuntu, sans-serif !important;
+  color: #f7d7c8;
+  text-align: center;
+  padding: 20px 63px 20px 61px;
+}
+
+#section-4 span > button:hover {
+  border-color: #ffffff;
+  background: #ffffff;
+  color: #000;
+}
+
+#section-5 {
+  margin: 10rem auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+#section-5 p {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: "Open Sans", sans-serif;
+}
+
+#section-5 .left,
+#section-5 .right {
+  margin: 0 1rem;
+}
+
+#section-5 .left h5 {
+  font-family: Ubuntu, sans-serif !important;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #f7d7c8;
+  font-weight: 700;
+}
+
+#section-6 {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#section-6 > * {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#section-6 h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #f7d7c8;
+}
+
 #section-6 div.img {
   height: 198px;
   width: 198px;
@@ -230,6 +361,46 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#section-6 i {
+  font-size: 1em;
+  color: #f7d7c8;
+}
+
+#section-6 a {
+  text-decoration: none;
+  border-style: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif !important;
+  padding: 0;
+  color: #ffffff;
+}
+
+#section-6 a:hover {
+  color: #f7d7c8;
+}
+
+#section-6 h6 {
+  color: #f7d7c8;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: Ubuntu, sans-serif !important;
+}
+
+#section-6 p {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: "Open Sans", sans-serif;
+}
+
+#section-6 hr {
+  border-width: 10px;
+  stroke: none;
+  width: 198px;
+  color: #f7d7c8;
+  border-style: solid;
 }
 
 footer {
