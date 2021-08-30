@@ -69,8 +69,11 @@ section {
     @include centerImg("pexels-photo-8832583.jpeg");
   }
   p {
+    font-size: 1rem;
     font-weight: 300;
+    line-height: 1.8;
     text-align: justify;
+    word-wrap: break-word;
 
     color: $text-color-grey;
     padding: 0 12rem;
@@ -85,8 +88,15 @@ section {
   overflow: hidden;
 
   .left {
+    h1,
+    h4 {
+      margin: 0 2rem;
+    }
     h1 {
       color: $text-color-pink;
+      font-weight: 700;
+      font-size: 3rem;
+      line-height: 1.1;
     }
     h4 {
       color: $text-color;

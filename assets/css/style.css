@@ -83,8 +83,11 @@ section {
 }
 
 #section-1 p {
+  font-size: 1rem;
   font-weight: 300;
+  line-height: 1.8;
   text-align: justify;
+  word-wrap: break-word;
   color: #999999;
   padding: 0 12rem;
   font-family: "Open Sans", sans-serif;
@@ -100,8 +103,16 @@ section {
   overflow: hidden;
 }
 
+#section-2 .left h1,
+#section-2 .left h4 {
+  margin: 0 2rem;
+}
+
 #section-2 .left h1 {
   color: #f7d7c8;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.1;
 }
 
 #section-2 .left h4 {
